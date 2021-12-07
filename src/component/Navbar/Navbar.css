@@ -1,0 +1,25 @@
+.nav{
+    display: flex;
+    height: 10vh;
+    background-color:#c0ddf0;
+    color: #08263b;
+    align-items: center;
+    justify-content:space-between;
+    
+}
+
+.user-img img{
+    width: 38px;
+    height: 38px;
+    margin-right: 5px;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+}
+
+.logo i{
+    color: #08263b;
+}
