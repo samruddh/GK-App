@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import './Game.css'
-//import { getData } from '../../Service/api'
+import './Game.css';
 
 export default function Game() {
 
@@ -16,23 +15,21 @@ export default function Game() {
     var anstemp = data[0].answer;
     setAns(anstemp);
     }
-    
-    // var apidata = getData();
-    // console.log(apidata);
-    // setData(apidata) ;
-    // var anstemp = apidata[0].answer;
-    // setAns(anstemp);
 
-    function check(e){
-        if(ans===input){
-          setFinal('Correct! Best of luck for next Question')
-        }
+    function check(){
+
+        if(input=='') alert('Please enter the answer');
         else{
-          setFinal('Wrong! Try next to give next answer'); 
+            if(ans===input){
+                setFinal('Correct! Best of luck for next Question')
+            }
+            else{
+                setFinal('Wrong! Try next to give next answer'); 
+            }
+            getData();
+            setInput('')
+            setTimeout(function(){setFinal('')}, 2000);
         }
-        getData();
-        setInput('')
-        setTimeout(function(){setFinal('')}, 2000);
     }
 
     useEffect(() => {
